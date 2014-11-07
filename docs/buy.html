@@ -92,6 +92,8 @@
                       <li><a href="#filter" title="All" data-filter="*" class="selected">All</a></li>
                       <li><a href="#filter" title="Tables" data-filter=".tables">Tables</a></li>
                       <li><a href="#filter" title="Chairs" data-filter=".chairs">Chairs</a></li>
+                      <li><a href="#filter" title="Chairs" data-filter=".decor">Decoration</a></li>
+                      <li><a href="#filter" title="Chairs" data-filter=".sofas">Sofas</a></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>
@@ -101,44 +103,7 @@
 
           <div class="container-fluid" id="images-container">
             <ul id="ublportfolio" class="grid cs-style-3">
-              <li class="thisportfolioitem onecol chairs" data-category="chairs">
-                <div id="drag" class="draggable js-drag">
-                <figure>
-                  <img src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG" alt="MILAN Playground">
-                  <figcaption>
-                    <h3>Super table</h3>
-                    <span>A very nice table for you to buy</span>
-                    <a href="#">View Item</a>
-                  </figcaption>
-                </figure>
-              </div>
-              </li>
-
-              <li class="thisportfolioitem onecol chairs" data-category="chairs">
-                <div id="drag" class="draggable js-drag">
-                  <figure>
-                    <img src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG" alt="MILAN Playground">
-                    <figcaption>
-                      <h3>Super chair</h3>
-                      <span>A very nice chair for you to buy</span>
-                      <a href="#">View Item</a>
-                    </figcaption>
-                  </figure>
-                </div>
-              </li>
-
-              <li class="thisportfolioitem onecol tables" data-category="tables">
-                <div id="drag" class="draggable js-drag">
-                  <figure>
-                    <img src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG" alt="MILAN Playground">
-                    <figcaption>
-                      <h3>Super table</h3>
-                      <span>A very nice table for you to buy</span>
-                      <a href="#">View Item</a>
-                    </figcaption>
-                  </figure>
-                </div>
-              </li>
+              
             </ul>
           </div>
 
@@ -201,6 +166,18 @@
 
       // PORTFOLIO ON PAGE LOAD
       jQuery(window).load(function() {
+        var jsonString = '{"products": [{"category": "chairs", "path": "../assets/img/products/chairs/audrey hepburn chairs.jpg", "price": 90, "title": "audrey hepburn chairs"}, {"category": "chairs", "path": "../assets/img/products/chairs/black white chair.jpg", "price": 509, "title": "black white chair"}, {"category": "chairs", "path": "../assets/img/products/chairs/camel chair.jpg", "price": 420, "title": "camel chair"}, {"category": "chairs", "path": "../assets/img/products/chairs/chair.JPG", "price": 274, "title": "chair"}, {"category": "chairs", "path": "../assets/img/products/chairs/chrome blue bar stool.jpg", "price": 546, "title": "chrome blue bar stool"}, {"category": "chairs", "path": "../assets/img/products/chairs/disc chairs.jpg", "price": 422, "title": "disc chairs"}, {"category": "chairs", "path": "../assets/img/products/chairs/green flower chair.jpg", "price": 175, "title": "green flower chair"}, {"category": "chairs", "path": "../assets/img/products/chairs/orange chair.jpg", "price": 433, "title": "orange chair"}, {"category": "chairs", "path": "../assets/img/products/chairs/red metalic chair.jpg", "price": 67, "title": "red metalic chair"}, {"category": "chairs", "path": "../assets/img/products/chairs/wooden bar stool.jpg", "price": 314, "title": "wooden bar stool"}, {"category": "chairs", "path": "../assets/img/products/chairs/wooden chair.jpg", "price": 579, "title": "wooden chair"}, {"category": "decor", "path": "../assets/img/products/decor/eye pillow.jpg", "price": 127, "title": "eye pillow"}, {"category": "decor", "path": "../assets/img/products/decor/gothic frame.jpg", "price": 463, "title": "gothic frame"}, {"category": "decor", "path": "../assets/img/products/decor/keep calm and drink wine frame.jpg", "price": 508, "title": "keep calm and drink wine frame"}, {"category": "decor", "path": "../assets/img/products/decor/mona lisa painting.jpeg", "price": 35, "title": "mona lisa painting"}, {"category": "decor", "path": "../assets/img/products/decor/orange pillow.jpg", "price": 184, "title": "orange pillow"}, {"category": "decor", "path": "../assets/img/products/decor/owls.jpg", "price": 232, "title": "owls"}, {"category": "decor", "path": "../assets/img/products/decor/peacock lamp.jpg", "price": 223, "title": "peacock lamp"}, {"category": "decor", "path": "../assets/img/products/decor/pillow.jpg", "price": 184, "title": "pillow"}, {"category": "decor", "path": "../assets/img/products/decor/pineapple pillow.jpg", "price": 101, "title": "pineapple pillow"}, {"category": "decor", "path": "../assets/img/products/decor/plant.jpeg", "price": 214, "title": "plant"}, {"category": "decor", "path": "../assets/img/products/decor/red rug.jpg", "price": 423, "title": "red rug"}, {"category": "decor", "path": "../assets/img/products/decor/sport lamp.jpg", "price": 171, "title": "sport lamp"}, {"category": "decor", "path": "../assets/img/products/decor/superman frame.jpg", "price": 219, "title": "superman frame"}, {"category": "sofas", "path": "../assets/img/products/sofas/blue armchair.jpg", "price": 183, "title": "blue armchair"}, {"category": "sofas", "path": "../assets/img/products/sofas/blue crown armchair.jpg", "price": 500, "title": "blue crown armchair"}, {"category": "sofas", "path": "../assets/img/products/sofas/flower yellow armchair.jpg", "price": 554, "title": "flower yellow armchair"}, {"category": "sofas", "path": "../assets/img/products/sofas/god save the queen armchair.jpg", "price": 155, "title": "god save the queen armchair"}, {"category": "sofas", "path": "../assets/img/products/sofas/green-blue sofa.jpg", "price": 280, "title": "green-blue sofa"}, {"category": "sofas", "path": "../assets/img/products/sofas/pink armchair.jpg", "price": 257, "title": "pink armchair"}, {"category": "sofas", "path": "../assets/img/products/sofas/red sofa.jpg", "price": 352, "title": "red sofa"}, {"category": "sofas", "path": "../assets/img/products/sofas/sofa-long.jpg", "price": 493, "title": "sofa-long"}, {"category": "sofas", "path": "../assets/img/products/sofas/sofa.jpeg", "price": 260, "title": "sofa"}, {"category": "sofas", "path": "../assets/img/products/sofas/yellow armchair.jpg", "price": 267, "title": "yellow armchair"}, {"category": "sofas", "path": "../assets/img/products/sofas/zebra armchair.jpg", "price": 545, "title": "zebra armchair"}, {"category": "tables", "path": "../assets/img/products/tables/black coffee table.jpg", "price": 172, "title": "black coffee table"}, {"category": "tables", "path": "../assets/img/products/tables/cube table.jpg", "price": 244, "title": "cube table"}, {"category": "tables", "path": "../assets/img/products/tables/table and bench.jpg", "price": 243, "title": "table and bench"}, {"category": "tables", "path": "../assets/img/products/tables/table with 4 chairs included.jpg", "price": 571, "title": "table with 4 chairs included"}, {"category": "tables", "path": "../assets/img/products/tables/table.JPG", "price": 336, "title": "table"}, {"category": "tables", "path": "../assets/img/products/tables/tambour table.jpg", "price": 201, "title": "tambour table"}, {"category": "tables", "path": "../assets/img/products/tables/white and black coffee table.jpg", "price": 372, "title": "white and black coffee table"}]}';
+
+        var obj = jQuery.parseJSON( jsonString );
+
+        function addElement( elem ) {
+          var element = '<li class="thisportfolioitem onecol '+ elem.category + '" data-category="'+ elem.category + '"><div id="drag" class="draggable js-drag"><figure><img src="'+ elem.path + '" alt="'+ elem.category + '"><figcaption><h3>'+ elem.title + '</h3><span>Price: '+ elem.price + '</span><a href="#">View Item</a></figcaption></figure></div></li>'
+          jQuery( "#ublportfolio" ).append( element );
+          console.log( element );
+        }
+
+        var products = obj.products;
+        products.forEach( addElement );
 
         jQuery('#ublportfolio').isotope({
           animationOptions: {
@@ -209,10 +186,6 @@
           animationEngine : 'best-available',
           itemSelector: '.thisportfolioitem, .portfolioitem'
         });
-
-        var jsonString = '{"products": [{"title": "Table1", "price": 450, "path": "../img/products/tables/table.JPG", "category": "table" }, { "title": "Table1", "price": 450, "path": "../img/products/tables/table.JPG", "category": "table" } ] }';
-
-        var obj = jQuery.parseJSON( jsonString );
       });
     </script>
 
