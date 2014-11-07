@@ -116,7 +116,7 @@
 
       <hr>
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; Schibsted 2014</p>
       </footer>
 
     </div><!--/.fluid-container-->
@@ -142,6 +142,10 @@
     <script src="../assets/js/dropzones.js"></script>
 
     <script>
+      function rearrange() {
+        jQuery('#ublportfolio').isotope('layout');
+      }
+
       jQuery.noConflict();
       jQuery(document).ready(function($) {
         jQuery('ul#filters > li > a').click(function(){
@@ -156,14 +160,13 @@
 
         thisoptionLinks.click(function(){
           var thisss = jQuery(this);
-        // don't proceed if already selected
-        if ( thisss.hasClass('selected') ) {
-          return false;
-        }
-        var thisoptionSets = thisss.parents('.option-set');
-        thisoptionSets.find('.selected').removeClass('selected');
-        thisss.addClass('selected');
-
+          // don't proceed if already selected
+          if ( thisss.hasClass('selected') ) {
+            return false;
+          }
+          var thisoptionSets = thisss.parents('.option-set');
+          thisoptionSets.find('.selected').removeClass('selected');
+          thisss.addClass('selected');
         });
       });
 
@@ -176,7 +179,6 @@
         function addElement( elem ) {
           var element = '<li class="thisportfolioitem onecol '+ elem.category + '" data-category="'+ elem.category + '"><div id="drag" class="draggable js-drag"><figure><img src="'+ elem.path + '" alt="'+ elem.category + '"><figcaption><h3>'+ elem.title + '</h3><span>Price: '+ elem.price + '</span><a href="#">View Item</a></figcaption></figure></div></li>'
           jQuery( "#ublportfolio" ).append( element );
-          console.log( element );
         }
 
         var products = obj.products;
@@ -189,6 +191,11 @@
           animationEngine : 'best-available',
           itemSelector: '.thisportfolioitem, .portfolioitem'
         });
+
+        setTimeout( function(){ 
+            rearrange();
+          }
+        , 500 );
       });
     </script> 
 
