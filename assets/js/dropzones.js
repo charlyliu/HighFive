@@ -86,7 +86,7 @@
             .on('drop', function (event) {
                 // removeClass(event.target, '-drop-over');
 
-                jQuery("#drop-zone-sidebar ul").append('<li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src='+event.relatedTarget.childNodes[1].childNodes[1].src+'></img><h3>'+ event.relatedTarget.childNodes[1].childNodes[3].childNodes[1].textContent +'</h3></div></li>');
+                jQuery("#drop-zone-sidebar ul").append('<li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src='+event.relatedTarget.childNodes[0].childNodes[0].src+'></img><h3>'+ event.relatedTarget.childNodes[0].childNodes[1].childNodes[0].textContent +'</h3></div></li>');
                 event.relatedTarget.remove()
             });
     }
