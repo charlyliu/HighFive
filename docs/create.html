@@ -28,7 +28,7 @@
       }
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../assets/css/dropzones.css">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
@@ -71,16 +71,17 @@
       <div class="row-fluid">
         <div class="span3">
           <div class="well sidebar-nav">
+            <div id="drop-zone-sidebar" class="drop-sidebar">
             <ul class="nav nav-list">
               <li class="nav-header">Your Products</li>
-              <li><img width=80 src="../assets/img/products/chairs/audrey hepburn chairs.jpg"></img></li>
-              <li><img width=100 src="../assets/img/products/sofas/red sofa.jpg"></img></li>
-              <li><img width=80 src="../assets/img/products/tables/white and black coffee table.jpg"></img></li>
-              <li><img width=80 src="../assets/img/products/decor/plant.jpeg"></img></li>
-              <li><img width=80 src="../assets/img/products/decor/eye pillow.jpg"></img></li>
-              <li><img width=80 src="../assets/img/products/decor/pillow.jpg"></img></li>
-              <li><img width=80 src="../assets/img/products/decor/owls.jpg"></img></li>
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/chairs/audrey hepburn chairs.jpg"></img><h3>audrey hepburn chair</h3></div></li>
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/sofas/red sofa.jpg"></img><h3>red sofa</h3></div></li>
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/tables/white and black coffee table.jpg"></img><h3>white and black coffee table</h3></div></li>
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/decor/plant.jpeg"></img><h3>plant</h3></div></li>
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/decor/eye pillow.jpg"></img><h3>eye pillow</h3></div></li>
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/decor/owls.jpg"></img><h3>owls</h3></div></li>
               </ul>
+            </div>
           </div><!--/.well -->
         </div><!--/span-->
 
@@ -92,7 +93,7 @@
             </div>
             <p>
           </div>
-          <div class="row-fluid" id="background-image">
+          <div class="drop-collage row-fluid" id="background-image">
             <img src="../assets/img/bckg/greenroom.jpg"/>
           </div><!--/row-->
           <p>
@@ -129,6 +130,8 @@
     <script src="../assets/js/bootstrap-collapse.js"></script>
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="../assets/js/interact-1.1.0.js"></script>
+    <script src="../assets/js/dropzones.js"></script>
 
     <script>
         $( "#background-button-1" ).click(function() {
