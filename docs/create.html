@@ -140,6 +140,7 @@
         });
 
         $( "#background-button-2" ).click(function() {
+            $("img",this).remove();
             $("background-image").html("<img='../assets/img/bckg/terrace.jpg />'");
             alert( "image 2" );
         });
