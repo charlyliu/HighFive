@@ -174,7 +174,7 @@
         var obj = jQuery.parseJSON( jsonString );
 
         function addElement( elem ) {
-          var element = '<li class="thisportfolioitem onecol '+ elem.category + '" data-category="'+ elem.category + '"><div id="drag" class="draggable js-drag"><figure><img src="'+ elem.path + '" alt="'+ elem.category + '"><figcaption><h3>'+ elem.title + '</h3><span>Price: '+ elem.price + '</span><a href="#">View Item</a></figcaption></figure></div></li>'
+          var element = '<li class="thisportfolioitem onecol '+ elem.category + '" data-category="'+ elem.category + '"><div id="drag" class="draggable js-drag"><figure><img src="'+ elem.path + '" alt="'+ elem.category + '"><figcaption><h3>'+ elem.title + '</h3><span>Price: '+ elem.price + '</span><a href="#">Buy Item</a></figcaption></figure></div></li>'
           jQuery( "#ublportfolio" ).append( element );
         }
 
@@ -192,9 +192,9 @@
         setTimeout( function(){ 
             rearrange();
           }
-        , 500 );
+        , 100 );
       });
     </script>
-<script src="../assets/js/dropzones.js"></script>
+    <script src="../assets/js/dropzones.js"></script>
   </body>
 </html>
