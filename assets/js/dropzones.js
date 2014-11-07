@@ -86,7 +86,7 @@
             .on('drop', function (event) {
                 // removeClass(event.target, '-drop-over');
                 event.relatedTarget.remove()
-                $("#drop-zone-sidebar ul").append('<li><div id="dragable-sidebar" class="draggable js-drag"><img width=80 src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG"></img></div></li>');
+                jQuery("#drop-zone-sidebar ul").append('<li><div id="dragable-sidebar" class="draggable js-drag"><img width=80 src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG"></img></div></li>');
             });
     }
 
