@@ -30,6 +30,7 @@
     <link href="../assets/css/style.css" rel="stylesheet">
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../assets/css/custom-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/dropzones.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -72,14 +73,16 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
-          <div class="well sidebar-nav">
+          <div class="dropzone sidebar-nav">
+            <div id="drop-zone-sidebar" class="drop-sidebar">
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
-              <li><img width=80 src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG"><a href="#">Link</a></img></li>
-              <li><img width=80 src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG"><a href="#">Link</a></img></li>
-              <li><img width=80 src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG"><a href="#">Link</a></img></li>
-              
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=80 src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG"></img></div></li>
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=80 src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG"></img></div></li>
+              <li><div id="dragable-sidebar" class="draggable js-drag"><img width=80 src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG"></img></divg></li>
+
             </ul>
+            </div>
           </div><!--/.well -->
         </div><!--/span-->
 
@@ -98,10 +101,11 @@
             </div>
             <p>
           </div>
-          
+
           <div class="container-fluid" id="images-container">
             <ul id="ublportfolio" class="grid cs-style-3">
               <li class="thisportfolioitem onecol chairs" data-category="chairs">
+                <div id="drag" class="draggable js-drag">
                 <figure>
                   <img src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG" alt="MILAN Playground">
                   <figcaption>
@@ -110,32 +114,37 @@
                     <a href="#">View Item</a>
                   </figcaption>
                 </figure>
+              </div>
               </li>
 
               <li class="thisportfolioitem onecol chairs" data-category="chairs">
-                <figure>
-                  <img src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG" alt="MILAN Playground">
-                  <figcaption>
-                    <h3>Super chair</h3>
-                    <span>A very nice chair for you to buy</span>
-                    <a href="#">View Item</a>
-                  </figcaption>
-                </figure>
+                <div id="drag" class="draggable js-drag">
+                  <figure>
+                    <img src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG" alt="MILAN Playground">
+                    <figcaption>
+                      <h3>Super chair</h3>
+                      <span>A very nice chair for you to buy</span>
+                      <a href="#">View Item</a>
+                    </figcaption>
+                  </figure>
+                </div>
               </li>
 
               <li class="thisportfolioitem onecol tables" data-category="tables">
-                <figure>
-                  <img src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG" alt="MILAN Playground">
-                  <figcaption>
-                    <h3>Super table</h3>
-                    <span>A very nice table for you to buy</span>
-                    <a href="#">View Item</a>
-                  </figcaption>
-                </figure>
+                <div id="drag" class="draggable js-drag">
+                  <figure>
+                    <img src="http://www.ikea.com/PIAimages/20315_PE105482_S5.JPG" alt="MILAN Playground">
+                    <figcaption>
+                      <h3>Super table</h3>
+                      <span>A very nice table for you to buy</span>
+                      <a href="#">View Item</a>
+                    </figcaption>
+                  </figure>
+                </div>
               </li>
             </ul>
           </div>
-          
+
           <p align="right"><a class="btn btn-success btn-large" href="create">Go decorate your room!&raquo;</a></p>
         </div><!--/span-->
       </div><!--/row-->
@@ -164,46 +173,10 @@
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
     <script src="../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../assets/js/interact-1.1.0.js"></script>
+    <script src="../assets/js/dropzones.js"></script>
 
-    <script>
-    jQuery.noConflict();
-    jQuery(document).ready(function($) {
-      jQuery('ul#filters > li > a').click(function(){
-            var selector = jQuery(this).attr('data-filter');
-            jQuery('#ublportfolio').isotope({ filter: selector });
-            return false;
-           });
-      
-      // set selected menu items
-      var thisoptionSets = jQuery('.option-set'),
-      thisoptionLinks = thisoptionSets.find('a');
 
-      thisoptionLinks.click(function(){
-        var thisss = jQuery(this);
-      // don't proceed if already selected
-      if ( thisss.hasClass('selected') ) {
-        return false;
-      }
-      var thisoptionSets = thisss.parents('.option-set');
-      thisoptionSets.find('.selected').removeClass('selected');
-      thisss.addClass('selected');
-
-      });
-    });
-
-    // PORTFOLIO ON PAGE LOAD
-    jQuery(window).load(function() {
-
-      jQuery('#ublportfolio').isotope({
-        animationOptions: {
-          duration: 750
-        },
-        animationEngine : 'best-available',
-        itemSelector: '.thisportfolioitem, .portfolioitem'
-      });
-    });
-    </script> 
-    
 
   </body>
 </html>
