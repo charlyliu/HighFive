@@ -176,7 +176,48 @@
     <script src="../assets/js/interact-1.1.0.js"></script>
     <script src="../assets/js/dropzones.js"></script>
 
+    <script>
+      jQuery.noConflict();
+      jQuery(document).ready(function($) {
+        jQuery('ul#filters > li > a').click(function(){
+              var selector = jQuery(this).attr('data-filter');
+              jQuery('#ublportfolio').isotope({ filter: selector });
+              return false;
+             });
+        
+        // set selected menu items
+        var thisoptionSets = jQuery('.option-set'),
+        thisoptionLinks = thisoptionSets.find('a');
 
+        thisoptionLinks.click(function(){
+          var thisss = jQuery(this);
+        // don't proceed if already selected
+        if ( thisss.hasClass('selected') ) {
+          return false;
+        }
+        var thisoptionSets = thisss.parents('.option-set');
+        thisoptionSets.find('.selected').removeClass('selected');
+        thisss.addClass('selected');
+
+        });
+      });
+
+      // PORTFOLIO ON PAGE LOAD
+      jQuery(window).load(function() {
+
+        jQuery('#ublportfolio').isotope({
+          animationOptions: {
+            duration: 750
+          },
+          animationEngine : 'best-available',
+          itemSelector: '.thisportfolioitem, .portfolioitem'
+        });
+
+        var jsonString = '{"products": [{"title": "Table1", "price": 450, "path": "../img/products/tables/table.JPG", "category": "table" }, { "title": "Table1", "price": 450, "path": "../img/products/tables/table.JPG", "category": "table" } ] }';
+
+        var obj = jQuery.parseJSON( jsonString );
+      });
+    </script> 
 
   </body>
 </html>
