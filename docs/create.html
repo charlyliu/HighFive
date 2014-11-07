@@ -99,6 +99,7 @@
               <a class="btn btn-large" href="#" id="background-button-1">Background 1</a>
               <a class="btn btn-large" href="#" id="background-button-2">Background 2</a>
               <a class="btn btn-large" href="#" id="background-button-3">Background 3</a>
+              <a class="btn btn-large" href="#" id="background-button-4">Background 4</a>
           </p>
           <p align="right"><a class="btn btn-success btn-large" href="publish.html">Publish your creation!</a></p>
         </div><!--/span-->
@@ -130,9 +131,15 @@
     <script src="../assets/js/bootstrap-typeahead.js"></script>
 
     <script>
-  jQuery( "#background-image" ).click(function() {
-  alert( "Handler for .click() called." );
-});
+        $( "#background-button-1" ).click(function() {
+            alert( "image 1" );
+            $("background-image").html("<img='../assets/img/bckg/greenroom.jpg />'");
+        });
+
+        $( "#background-button-2" ).click(function() {
+            $("background-image").html("<img='../assets/img/bckg/terrace.jpg />'");
+            alert( "image 2" );
+        });
   </script>
 
   </body>
