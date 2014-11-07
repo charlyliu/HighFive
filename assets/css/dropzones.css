@@ -33,4 +33,4 @@ body { font-family: Helvetica, Arial, sans-serif; }
         touch-action: none;
 }
 
-.draggable.-drop-possible { background-color: #42bd41; }
+.draggable.-drop-possible { }
