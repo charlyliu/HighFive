@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Create</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -54,7 +54,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Collage Quest</a>
+          <a class="brand" href="buy.html">Collage Quest</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link">Sandra</a>
@@ -76,7 +76,7 @@
             <div id="drop-zone-sidebar" class="drop-sidebar">
             <ul class="nav nav-list">
               <li class="nav-header" style="padding-left:25px; margin-bottom:20px;">Your Products</li>
-              
+
               <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/chairs/audrey hepburn chairs.jpg"></img><h3>audrey hepburn chair</h3></div></li>
               <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/tables/white and black coffee table.jpg"></img><h3>white and black coffee table</h3></div></li>
               <li><div id="dragable-sidebar" class="draggable js-drag"><img width=160 src="../assets/img/products/decor/plant.jpeg"></img><h3>plant</h3></div></li>
@@ -110,7 +110,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; Schibsted 2014</p>
       </footer>
 
     </div><!--/.fluid-container-->
@@ -136,13 +136,12 @@
 
     <script>
         $( "#background-button-1" ).click(function() {
-            alert( "image 1" );
-            $("background-image").html("<img='../assets/img/bckg/greenroom.jpg />'");
+            jQuery("#background-image")[0].childNodes[1].remove()
+            jQuery("#background-image")[0].childNodes[1].append("<img src='../assets/img/bckg/greenroom.jpg />'");
         });
 
         $( "#background-button-2" ).click(function() {
-            $("img",this).remove();
-            $("background-image").html("<img='../assets/img/bckg/terrace.jpg />'");
+            jQuery("#background-image img").attr("src") = "../assets/img/bckg/terrace.jpg />";
             alert( "image 2" );
         });
   </script>
