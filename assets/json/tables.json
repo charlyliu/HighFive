@@ -1,0 +1,14 @@
+{
+    "products": [
+                 {
+                 "title": "Table1",
+                 "price": 450,
+                 "path": "../img/products/tables/table.JPG"
+                 },
+                 {
+                 "title": "Table1",
+                 "price": 450,
+                 "path": "../img/products/tables/table.JPG"
+                 }
+                 ]
+}
